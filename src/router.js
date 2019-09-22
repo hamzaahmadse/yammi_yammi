@@ -10,8 +10,8 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'home',
-      component: Home
+      name: 'dashboard',
+      component: () => import( './views/dashboard.vue')
     },
     {
       path: '/about',
@@ -25,11 +25,6 @@ export default new Router({
       path: '/delivary',
       name: 'delivary',
       component: () => import( './views/delivary-area.vue')
-    },
-    {
-      path: '/dashboard',
-      name: 'dashboard',
-      component: () => import( './views/dashboard.vue')
     },
     {
       path: '/customer',

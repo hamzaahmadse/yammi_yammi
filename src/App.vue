@@ -17,7 +17,7 @@
 
 <style lang="scss">
 
-  @import "./../public/inc_bundle.scss";
+  /*@import "./../public/inc_bundle.scss";*/
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

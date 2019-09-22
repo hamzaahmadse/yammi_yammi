@@ -4,8 +4,9 @@
          style="background-image: url(&quot;./assets/img/sidebar-2.jpg&quot;);">
       <div class="sidebar-wrapper ps ps--active-x">
         <ul class="md-list nav md-theme-default">
-          <li :class="{ 'active': $route.path==='/dashboard' }">
-            <!----><router-link to="/dashboard" class="nav-link" active-class="active"><i class="far fa-chart-bar"></i>
+          <li :class="{ 'active': $route.path==='/' }">
+
+            <!----><router-link to="/" class="nav-link" active-class="active"><i class="far fa-chart-bar"></i>
             <p>Dashboard</p></router-link></li>
           <li :class="{ 'active': $route.path==='/online-shop' }"><router-link to="/online-shop" class="nav-link sidebar-menu-item"><i
             class="fas fa-cart-plus"></i>
