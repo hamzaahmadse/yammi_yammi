@@ -1,7 +1,7 @@
 <template>
   <div class="sidebar" data-color="purple" data-image="assets/img/sidebar-1.jpg">
     <div data-color="green" data-image="img/sidebar-2.jpg" data-background-color="black" class="sidebar ps"
-         style="background-image: url(&quot;img/sidebar-2.jpg&quot;);">
+         style="background-image: url(&quot;./assets/img/sidebar-2.jpg&quot;);">
       <div class="sidebar-wrapper ps ps--active-x">
         <ul class="md-list nav md-theme-default">
           <li :class="{ 'active': $route.path==='/dashboard' }">

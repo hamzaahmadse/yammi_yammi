@@ -23,7 +23,7 @@
           </div>
           <div class="logo">
             <a href="#" class="simple-text logo-mini">
-              <div class="logo-img-left"><img src="img/yami-yami-logo.png"></div>
+              <div class="logo-img-left"><img src="./../assets/img/yami-yami-logo.png"></div>
             </a>
           </div>
           <div class="mainmenu_area">
