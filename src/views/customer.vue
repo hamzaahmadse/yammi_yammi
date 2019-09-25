@@ -18,7 +18,7 @@
 
                   <div class="info-box-content">
                     <span class="info-box-text">New Customers</span>
-                    <span class="info-box-number">10</span>
+                    <span class="info-box-number">{{ customer.new_customer }}</span>
                   </div>
                   <!-- /.info-box-content -->
                 </div>
@@ -31,7 +31,7 @@
 
                   <div class="info-box-content">
                     <span class="info-box-text">Regular Customers</span>
-                    <span class="info-box-number">500</span>
+                    <span class="info-box-number">{{ customer.regular_customer }}</span>
                   </div>
                   <!-- /.info-box-content -->
                 </div>
@@ -44,7 +44,7 @@
 
                   <div class="info-box-content">
                     <span class="info-box-text">Customers</span>
-                    <span class="info-box-number">510</span>
+                    <span class="info-box-number">{{ customer.customer }}</span>
                   </div>
                   <!-- /.info-box-content -->
                 </div>
@@ -92,42 +92,16 @@
                       </thead>
                       <tbody>
 
-                      <tr class="tbl-td1">
-                        <td>01</td>
-                        <td>1000</td>
-                        <td>Hans Muller</td>
-                        <td>30419 Hannover</td>
-                        <td>10.10.2016-17:23</td>
-                        <td>25</td>
-                        <td><i class="fa fa-euro"></i>150,50</td>
+                      <tr v-for="customer in customer.customer_data.customer">
+                        <td>{{ customer.id }}</td>
+                        <td>{{ customer.user_id }}</td>
+                        <td>{{ customer.name }}</td>
+                        <td>{{ customer.zip_code }}</td>
+                        <td>{{ customer.last_order }}</td>
+                        <td>{{ customer.order }}</td>
+                        <td><i class="fa fa-euro"></i>{{ customer.spend }}</td>
                       </tr>
-                      <tr>
-                        <td>01</td>
-                        <td>1000</td>
-                        <td>Hans Muller</td>
-                        <td>30419 Hannover</td>
-                        <td>10.10.2016-17:23</td>
-                        <td>25</td>
-                        <td><i class="fa fa-euro"></i>150,50</td>
-                      </tr>
-                      <tr class="tbl-td1">
-                        <td>01</td>
-                        <td>1000</td>
-                        <td>Hans Muller</td>
-                        <td>30419 Hannover</td>
-                        <td>10.10.2016-17:23</td>
-                        <td>25</td>
-                        <td><i class="fa fa-euro"></i>150,50</td>
-                      </tr>
-                      <tr>
-                        <td>01</td>
-                        <td>1000</td>
-                        <td>Hans Muller</td>
-                        <td>30419 Hannover</td>
-                        <td>10.10.2016-17:23</td>
-                        <td>25</td>
-                        <td><i class="fa fa-euro"></i>150,50</td>
-                      </tr>
+
                       </tbody>
                     </table>
 
@@ -237,74 +211,33 @@
               <div class="customerPanel brd-rad4 text-left mrgn20-0 br-t">
                 <h4 class="bg-h4 brd-btm_green fs14 pdng10-2 mrgn0 clr_white"><span
                   style="margin-left: 15px;">Best Clients</span></h4>
-                <div class="container" style="width: 100%">
+
+                <div class="container" style="width: 100%" v-for="best_client in customer.best_clients">
                   <div class="row" style="background: #fff">
                     <div class="customerPanelUser col-md-12 pdng15">
                       <div class="row mrgn0">
                         <div class="col-xs-3 pdng0">
-                          <img src="img/user1.jpg" class="img-responsive" alt="">
+                          <img :src="best_client.image" class="img-responsive" alt="">
                         </div>
                         <div class="col-xs-9">
                           <div class="row">
                             <div class="col-md-12">
-                              <h6 class="fs14 col-xs-6 pdng0 mrgn0">Mark Hamster</h6>
+                               <h6 class="fs14 col-xs-6 pdng0 mrgn0">{{ best_client.name }}</h6>
                               <h6 class="customerPanelMoney col-xs-6 pdng0"><i
-                                class="fas fa-euro-sign"></i>150,50</h6>
+                                class="fas fa-euro-sign"></i>{{ best_client.spend }}</h6>
                             </div>
                           </div>
                           <div class="bg_light-grey text-left clr_white relative progressWrapper">
-                            <span class="progressBarValue relative">50</span>
+                            <span class="progressBarValue relative">{{ best_client.percentage }}</span>
                             <div class="progressBar absolute height100"
                                  style="width:50%;"></div>
                           </div>
                         </div>
                       </div>
                     </div><!-- customerPanel end -->
-                    <div class="customerPanelUser col-md-12 pdng15">
-                      <div class="row mrgn0">
-                        <div class="col-xs-3 pdng0">
-                          <img src="img/user2.jpg" class="img-responsive" alt="">
-                        </div>
-                        <div class="col-xs-9">
-                          <div class="row">
-                            <div class="col-md-12">
-                              <h6 class="fs14 col-xs-6 pdng0 mrgn0">Jake
-                                Porcupine</h6>
-                              <h6 class="customerPanelMoney col-xs-6 pdng0"><i
-                                class="fas fa-euro-sign"></i>16250,50</h6>
-                            </div>
-                          </div>
-                          <div class="bg_light-grey text-left clr_white relative progressWrapper">
-                            <span class="progressBarValue relative">30</span>
-                            <div class="progressBar absolute height100"
-                                 style="width:30%;"></div>
-                          </div>
-                        </div>
-                      </div>
-                    </div><!-- customerPanel end -->
-                    <div class="customerPanelUser col-md-12 pdng15 border-bottom">
-                      <div class="row mrgn0">
-                        <div class="col-xs-3 pdng0">
-                          <img src="img/user1.jpg" class="img-responsive" alt="">
-                        </div>
-                        <div class="col-xs-9">
-                          <div class="row">
-                            <div class="col-md-12">
-                              <h6 class="fs14 col-xs-6 pdng0 mrgn0">Mark Hamster</h6>
-                              <h6 class="customerPanelMoney col-xs-6 pdng0"><i
-                                class="fas fa-euro-sign"></i>1250,50</h6>
-                            </div>
-                          </div>
-                          <div class="bg_light-grey text-left clr_white relative progressWrapper">
-                            <span class="progressBarValue relative">80</span>
-                            <div class="progressBar absolute height100"
-                                 style="width:80%;"></div>
-                          </div>
-                        </div>
-                      </div>
-                    </div><!-- customerPanel end -->
                   </div>
                 </div>
+
               </div>
             </div>
 
@@ -323,5 +256,25 @@
 
 
 <style>
-  /*@import './../../public/css/order.css';*/
+  /*@import './../assets/css/order.css';*/
 </style>
+
+<script>
+  import {mapState} from 'vuex';
+  // import DashBoardTab from '@/components/DashBoardTab';
+  export default {
+
+    data(){
+      return {
+
+      }
+    },
+    computed: {
+      ...mapState({
+        customer: (state)=>{
+          return state.customer;
+        }
+      })
+    }
+  }
+</script>

@@ -333,7 +333,8 @@
   </div>
 </template>
 <style>
-  /*@import './../../public/css/order.css';*/
+  /*@import './../assets/css/order.css';*/
+  /*@import './../assets/css/offers.css';*/
 </style>
 <script>
   export default {

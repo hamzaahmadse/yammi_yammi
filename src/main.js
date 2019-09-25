@@ -8,7 +8,6 @@ global.$ = global.jQuery = JQuery
 
 require('./bootstrap.js')
 
-
 Vue.config.productionTip = false
 
 new Vue({

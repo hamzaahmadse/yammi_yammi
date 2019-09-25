@@ -1,5 +1,4 @@
 import JQuery from 'jquery';
-import PerfectScrollbar from 'vue2-perfect-scrollbar';
 global.$ = global.JQuery = JQuery;
 global._ = require('lodash')
 global.Popper = require('popper.js').default

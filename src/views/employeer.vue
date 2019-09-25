@@ -112,69 +112,16 @@
                         </thead>
                         <tbody>
 
-                        <tr role="row" class="odd">
 
-                          <td class="sorting_1">Event</td>
-                          <td>Title</td>
+                        <tr role="row" class="even" v-for="employ in employer.employer_data.employer">
 
-                          <td>17:20-19.04.2019</td>
-                          <td class="text-center">3</td>
-                          <td class="text-center">2365,50 €</td>
-                          <td><a href="#" class="btn btn-warning">In Progress</a></td>
-                          <td>
-                            <a href="#" class="btn btn-info"
-                               data-target="#add-employee" data-toggle="modal"><i
-                              class="fas fa-edit paddR"></i></a>
-                            <a href="#" class="btn btn-success"><i
-                              class="fas fa-times"></i></a>
+                          <td class="sorting_1">{{ employ.image }}</td>
+                          <td>{{ employ.id }}</td>
 
-                          </td>
-                        </tr>
-                        <tr role="row" class="even">
-
-                          <td class="sorting_1">Offer</td>
-                          <td>Title</td>
-
-                          <td>17:20-19.04.2019</td>
-                          <td class="text-center">20</td>
-                          <td class="text-center">2365,50 €</td>
-                          <td><a href="#" class="btn btn-success">At Way</a></td>
-                          <td>
-                            <a href="#" class="btn btn-info"
-                               data-target="#add-employee" data-toggle="modal"><i
-                              class="fas fa-edit paddR"></i></i></a>
-                            <a href="#" class="btn btn-success"><i
-                              class="fas fa-times"></i></a>
-
-                          </td>
-                        </tr>
-                        <tr role="row" class="odd">
-
-                          <td class="sorting_1">HotDeal</td>
-                          <td>Title</td>
-
-                          <td>17:20-19.04.2019</td>
-                          <td class="text-center">15</td>
-                          <td class="text-center">2365,50 €</td>
-                          <td><a href="#" class="btn btn-warning">In Progress</a></td>
-                          <td>
-                            <a href="#" class="btn btn-info"
-                               data-target="#add-employee" data-toggle="modal"><i
-                              class="fas fa-edit paddR"></i></i></a>
-                            <a href="#" class="btn btn-success"><i
-                              class="fas fa-times"></i></a>
-
-                          </td>
-                        </tr>
-                        <tr role="row" class="even">
-
-                          <td class="sorting_1">Food Deal</td>
-                          <td>Title</td>
-
-                          <td>17:20-19.04.2019</td>
-                          <td class="text-center">10</td>
-                          <td class="text-center">2365,50 €</td>
-                          <td><a href="#" class="btn btn-success">At Way</a></td>
+                          <td>{{ employ.name }}</td>
+                          <td class="text-center">{{ employ.date }}</td>
+                          <td class="text-center">{{ employ.type }}</td>
+                          <td><a href="#" class="btn primary">{{ employ.Status }}</a></td>
                           <td>
                             <a href="#" class="btn btn-info"
                                data-target="#add-employee" data-toggle="modal"><i
@@ -436,7 +383,21 @@
 </style>
 
 <script>
+  import {mapState} from 'vuex';
+  // import DashBoardTab from '@/components/DashBoardTab';
   export default {
-    name: 'employeer'
+    name: 'employeer',
+    data(){
+      return {
+
+      }
+    },
+    computed: {
+      ...mapState({
+        employer: (state)=>{
+          return state.employer;
+        }
+      })
+    }
   }
 </script>

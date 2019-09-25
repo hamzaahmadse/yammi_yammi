@@ -4,7 +4,6 @@
 
       <div class="col-md-12 page-content">
 
-
         <div class="customerTable">
 
           <!-- Tabs start here -->
@@ -135,33 +134,14 @@
                 </tr>
                 </thead>
                 <tbody>
-
-                <tr class="tbl-td1">
-                  <td>01</td>
-                  <td>1000</td>
-                  <td>Hans Muller</td>
-                  <td>30419 Hannover</td>
-                  <td>10.10.2016-17:23</td>
-                  <td>25</td>
-                  <td><i class="fa fa-euro"></i>150,50</td>
-                </tr>
-                <tr>
-                  <td>01</td>
-                  <td>1000</td>
-                  <td>Hans Muller</td>
-                  <td>30419 Hannover</td>
-                  <td>10.10.2016-17:23</td>
-                  <td>25</td>
-                  <td><i class="fa fa-euro"></i>150,50</td>
-                </tr>
-                <tr>
-                  <td>01</td>
-                  <td>1000</td>
-                  <td>Hans Muller</td>
-                  <td>30419 Hannover</td>
-                  <td>10.10.2016-17:23</td>
-                  <td>25</td>
-                  <td><i class="fa fa-euro"></i>150,50</td>
+                <tr v-for="pref in setting.setting_data.prefix">
+                  <td>{{ pref.id }}</td>
+                  <td>{{ pref.user_id }}</td>
+                  <td>{{ pref.name }}</td>
+                  <td>{{ pref.zip_code }}</td>
+                  <td>{{ pref.last_order }}</td>
+                  <td>{{ pref.order }}</td>
+                  <td><i class="fa fa-euro"></i>{{ pref.spend }}</td>
                 </tr>
                 </tbody>
               </table>
@@ -185,23 +165,14 @@
                 </thead>
                 <tbody>
 
-                <tr class="tbl-td1">
-                  <td>01</td>
-                  <td>1000</td>
-                  <td>Hans Muller</td>
-                  <td>30419 Hannover</td>
-                  <td>10.10.2016-17:23</td>
-                  <td>25</td>
-                  <td><i class="fa fa-euro"></i>150,50</td>
-                </tr>
-                <tr>
-                  <td>01</td>
-                  <td>1000</td>
-                  <td>Hans Muller</td>
-                  <td>30419 Hannover</td>
-                  <td>10.10.2016-17:23</td>
-                  <td>25</td>
-                  <td><i class="fa fa-euro"></i>150,50</td>
+                <tr v-for="website in setting.setting_data.website_title">
+                  <td>{{ website.id }}</td>
+                  <td>{{ website.user_id }}</td>
+                  <td>{{ website.name }}</td>
+                  <td>{{ website.zip_code }}</td>
+                  <td>{{ website.last_order }}</td>
+                  <td>{{ website.order }}</td>
+                  <td><i class="fa fa-euro"></i>{{ website.spend }}</td>
                 </tr>
                 </tbody>
               </table>
@@ -215,3 +186,22 @@
 <style>
   /*@import './../../public/css/order.css';*/
 </style>
+
+<script>
+  import {mapState} from 'vuex';
+  export default {
+    name: 'setting',
+    data(){
+      return {
+
+      }
+    },
+    computed: {
+      ...mapState({
+        setting: (state)=>{
+          return state.setting;
+        }
+      })
+    }
+  }
+</script>
