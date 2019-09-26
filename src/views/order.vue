@@ -65,68 +65,24 @@
                     </thead>
                     <tbody>
 
-                    <tr role="row" class="odd">
+                      <tr role="row" class="even" v-for="curr_order in order.orders.current_orders">
 
-                      <td class="sorting_1">YO-1022510</td>
-                      <td>My Shop</td>
+                      <td class="sorting_1">{{ curr_order.id }}</td>
+                      <td>{{ curr_order.name }}</td>
 
-                      <td>17:20-19.04.2019</td>
-                      <td class="text-center">2365,50 €</td>
-                      <td class="text-center">2365,50 €</td>
-                      <td class="text-center">2365,50 €</td>
-                      <td class="text-center">2365,50 €</td>
-                      <td><a href="#" class="btn btn-warning">In Progress</a></td>
+                      <td>{{ curr_order.date }}</td>
+                      <td class="text-center">{{ curr_order.order_cash }}</td>
+                      <td class="text-center">{{ curr_order.order_paypal }}</td>
+                      <td class="text-center">{{ curr_order.order_sofort }}</td>
+                      <td class="text-center">{{ curr_order.sub_total }}</td>
+                      <td><a href="#" class="btn btn-success">{{ curr_order.status }}</a></td>
                       <td>
                         <a href="#" class="btn btn-info" data-target="#add-orders-Popup" data-toggle="modal">View</a>
 
                       </td>
-                    </tr><tr role="row" class="even">
+                    </tr>
 
-                      <td class="sorting_1">YO-1022510</td>
-                      <td>My Shop</td>
-
-                      <td>17:20-19.04.2019</td>
-                      <td class="text-center">2365,50 €</td>
-                      <td class="text-center">2365,50 €</td>
-                      <td class="text-center">2365,50 €</td>
-                      <td class="text-center">2365,50 €</td>
-                      <td><a href="#" class="btn btn-success">At Way</a></td>
-                      <td>
-                        <a href="#" class="btn btn-info" data-target="#add-orders-Popup" data-toggle="modal">View</a>
-
-
-                      </td>
-                    </tr><tr role="row" class="odd">
-
-                      <td class="sorting_1">YO-1022510</td>
-                      <td>My Shop</td>
-
-                      <td>17:20-19.04.2019</td>
-                      <td class="text-center">2365,50 €</td>
-                      <td class="text-center">2365,50 €</td>
-                      <td class="text-center">2365,50 €</td>
-                      <td class="text-center">2365,50 €</td>
-                      <td><a href="#" class="btn btn-warning">In Progress</a></td>
-                      <td>
-                        <a href="#" class="btn btn-info" data-target="#add-orders-Popup" data-toggle="modal">View</a>
-
-                      </td>
-                    </tr><tr role="row" class="even">
-
-                      <td class="sorting_1">YO-1022510</td>
-                      <td>My Shop</td>
-
-                      <td>17:20-19.04.2019</td>
-                      <td class="text-center">2365,50 €</td>
-                      <td class="text-center">2365,50 €</td>
-                      <td class="text-center">2365,50 €</td>
-                      <td class="text-center">2365,50 €</td>
-                      <td><a href="#" class="btn btn-success">At Way</a></td>
-                      <td>
-                        <a href="#" class="btn btn-info" data-target="#add-orders-Popup" data-toggle="modal">View</a>
-
-                      </td>
-                    </tr></tbody>
+                    </tbody>
 
                   </table></div></div><div class="row"><div class="col-sm-5"><div class="dataTables_info" id="example1_info" role="status" aria-live="polite">Showing 1 to 4 of 4 entries</div></div><div class="col-sm-7"><div class="dataTables_paginate paging_simple_numbers" id="example1_paginate"><ul class="pagination"><li class="paginate_button previous disabled" id="example1_previous"><a href="#" aria-controls="example1" data-dt-idx="0" tabindex="0">Previous</a></li><li class="paginate_button active"><a href="#" aria-controls="example1" data-dt-idx="1" tabindex="0">1</a></li><li class="paginate_button next disabled" id="example1_next"><a href="#" aria-controls="example1" data-dt-idx="2" tabindex="0">Next</a></li></ul></div></div></div></div>
           </div>
@@ -173,17 +129,17 @@
               </tr>
               </thead>
               <tbody>
-              <tr>
+              <tr role="row" class="even" v-for="c_order in order.orders.cancel_orders">
 
-                <td>YO-1022510</td>
-                <td>My Shop</td>
+                <td class="sorting_1">{{ c_order.id }}</td>
+                <td>{{ c_order.name }}</td>
 
-                <td>17:20-19.04.2019</td>
-                <td class="text-center">2365,50 €</td>
-                <td class="text-center">2365,50 €</td>
-                <td class="text-center">2365,50 €</td>
-                <td class="text-center">2365,50 €</td>
-                <td><a href="#" class="btn btn-danger">Canceled</a></td>
+                <td>{{ c_order.date }}</td>
+                <td class="text-center">{{ c_order.order_cash }}</td>
+                <td class="text-center">{{ c_order.order_paypal }}</td>
+                <td class="text-center">{{ c_order.order_sofort }}</td>
+                <td class="text-center">{{ c_order.sub_total }}</td>
+                <td><a href="#" class="btn btn-danger">{{ c_order.status }}</a></td>
                 <td>
                   <a href="#" class="btn btn-info" data-target="#add-orders-Popup" data-toggle="modal">View</a>
 
@@ -240,39 +196,23 @@
               </tr>
               </thead>
               <tbody>
-              <tr>
 
-                <td>YO-1022510</td>
-                <td>My Shop</td>
+              <tr role="row" class="even" v-for="all_order in order.orders.all_orders">
 
-                <td>17:20-19.04.2019</td>
-                <td class="text-center">2365,50 €</td>
-                <td class="text-center">2365,50 €</td>
-                <td class="text-center">2365,50 €</td>
-                <td class="text-center">2365,50 €</td>
-                <td><a href="#" class="btn btn-success">At Way</a></td>
+                <td class="sorting_1">{{ all_order.id }}</td>
+                <td>{{ all_order.name }}</td>
+
+                <td>{{ all_order.date }}</td>
+                <td class="text-center">{{ all_order.order_cash }}</td>
+                <td class="text-center">{{ all_order.order_paypal }}</td>
+                <td class="text-center">{{ all_order.order_sofort }}</td>
+                <td class="text-center">{{ all_order.sub_total }}</td>
+                <td><a href="#" class="btn btn-danger">{{ all_order.status }}</a></td>
                 <td>
                   <a href="#" class="btn btn-info" data-target="#add-orders-Popup" data-toggle="modal">View</a>
 
                 </td>
               </tr>
-              <tr>
-
-                <td>YO-1022510</td>
-                <td>My Shop</td>
-
-                <td>17:20-19.04.2019</td>
-                <td class="text-center">2365,50 €</td>
-                <td class="text-center">2365,50 €</td>
-                <td class="text-center">2365,50 €</td>
-                <td class="text-center">2365,50 €</td>
-                <td><a href="#" class="btn btn-warning">In progress</a></td>
-                <td>
-                  <a href="#" class="btn btn-info" data-target="#add-orders-Popup" data-toggle="modal">View</a>
-
-                </td>
-              </tr>
-
 
 
               </tbody>
@@ -333,8 +273,22 @@
 <style>
   /*@import './../../public/css/order.css';*/
 </style>
+
 <script>
-  export default {
-    name: 'order'
-  }
+    import {mapState} from 'vuex';
+    export default {
+        name: 'order',
+        data(){
+            return {
+
+            }
+        },
+        computed: {
+            ...mapState({
+                order: (state)=>{
+                    return state.order;
+                }
+            })
+        }
+    }
 </script>

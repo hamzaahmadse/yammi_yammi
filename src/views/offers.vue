@@ -77,63 +77,22 @@
                           </thead>
                           <tbody>
 
-                          <tr role="row" class="odd">
+                          <tr role="row" class="odd"  v-for="offer in offer.offers.all_offers">
+                            <td class="sorting_1">{{ offer.type }}</td>
+                            <td>{{ offer.title }}</td>
 
-                            <td class="sorting_1">Event</td>
-                            <td>Title</td>
-
-                            <td>17:20-19.04.2019</td>
-                            <td class="text-center">3</td>
-                            <td class="text-center">2365,50 €</td>
-                            <td><a href="#" class="btn btn-warning">In Progress</a></td>
+                            <td>{{ offer.date }}</td>
+                            <td class="text-center">{{ offer.sale }}</td>
+                            <td class="text-center">{{ offer.earn }}</td>
+                            <td><a href="#" class="btn btn-warning">{{ offer.status }}</a></td>
                             <td>
                               <a href="#" class="btn btn-info"><i class="fas fa-eye"></i></a>
                               <a href="#" class="btn btn-success"><i class="fas fa-times"></i></a>
 
                             </td>
-                          </tr><tr role="row" class="even">
+                          </tr>
 
-                            <td class="sorting_1">Offer</td>
-                            <td>Title</td>
-
-                            <td>17:20-19.04.2019</td>
-                            <td class="text-center">20</td>
-                            <td class="text-center">2365,50 €</td>
-                            <td><a href="#" class="btn btn-success">At Way</a></td>
-                            <td>
-                              <a href="#" class="btn btn-info"><i class="fas fa-eye"></i></a>
-                              <a href="#" class="btn btn-success"><i class="fas fa-times"></i></a>
-
-                            </td>
-                          </tr><tr role="row" class="odd">
-
-                            <td class="sorting_1">HotDeal</td>
-                            <td>Title</td>
-
-                            <td>17:20-19.04.2019</td>
-                            <td class="text-center">15</td>
-                            <td class="text-center">2365,50 €</td>
-                            <td><a href="#" class="btn btn-warning">In Progress</a></td>
-                            <td>
-                              <a href="#" class="btn btn-info"><i class="fas fa-eye"></i></a>
-                              <a href="#" class="btn btn-success"><i class="fas fa-times"></i></a>
-
-                            </td>
-                          </tr><tr role="row" class="even">
-
-                            <td class="sorting_1">Food Deal</td>
-                            <td>Title</td>
-
-                            <td>17:20-19.04.2019</td>
-                            <td class="text-center">10</td>
-                            <td class="text-center">2365,50 €</td>
-                            <td><a href="#" class="btn btn-success">At Way</a></td>
-                            <td>
-                              <a href="#" class="btn btn-info"><i class="fas fa-eye"></i></a>
-                              <a href="#" class="btn btn-success"><i class="fas fa-times"></i></a>
-
-                            </td>
-                          </tr></tbody>
+                        </tbody>
 
                         </table></div></div><div class="row"><div class="col-sm-5"><div class="dataTables_info" id="example1_info" role="status" aria-live="polite">Showing 1 to 4 of 4 entries</div></div><div class="col-sm-7"><div class="dataTables_paginate paging_simple_numbers" id="example1_paginate"><ul class="pagination"><li class="paginate_button previous disabled" id="example1_previous"><a href="#" aria-controls="example1" data-dt-idx="0" tabindex="0">Previous</a></li><li class="paginate_button active"><a href="#" aria-controls="example1" data-dt-idx="1" tabindex="0">1</a></li><li class="paginate_button next disabled" id="example1_next"><a href="#" aria-controls="example1" data-dt-idx="2" tabindex="0">Next</a></li></ul></div></div></div></div>
                 </div>
@@ -189,58 +148,22 @@
                           </thead>
                           <tbody>
 
-                          <tr role="row" class="odd">
-                            <td>Title</td>
+                          <tr role="row" class="odd"  v-for="event in offer.offers.events">
 
-                            <td>17:20-19.04.2019</td>
-                            <td class="text-center">3</td>
-                            <td class="text-center">2365,50 €</td>
-                            <td><a href="#" class="btn btn-warning">In Progress</a></td>
+                            <td>{{ event.title }}</td>
+
+                            <td>{{ event.date }}</td>
+                            <td class="text-center">{{ event.sale }}</td>
+                            <td class="text-center">{{ event.earn }}</td>
+                            <td><a href="#" class="btn btn-warning">{{ event.status }}</a></td>
                             <td>
                               <a href="#" class="btn btn-info"><i class="fas fa-eye"></i></a>
                               <a href="#" class="btn btn-success"><i class="fas fa-times"></i></a>
 
                             </td>
-                          </tr><tr role="row" class="even">
+                          </tr>
 
-                            <td>Title</td>
-
-                            <td>17:20-19.04.2019</td>
-                            <td class="text-center">20</td>
-                            <td class="text-center">2365,50 €</td>
-                            <td><a href="#" class="btn btn-success">At Way</a></td>
-                            <td>
-                              <a href="#" class="btn btn-info"><i class="fas fa-eye"></i></a>
-                              <a href="#" class="btn btn-success"><i class="fas fa-times"></i></a>
-
-                            </td>
-                          </tr><tr role="row" class="odd">
-
-                            <td>Title</td>
-
-                            <td>17:20-19.04.2019</td>
-                            <td class="text-center">15</td>
-                            <td class="text-center">2365,50 €</td>
-                            <td><a href="#" class="btn btn-warning">In Progress</a></td>
-                            <td>
-                              <a href="#" class="btn btn-info"><i class="fas fa-eye"></i></a>
-                              <a href="#" class="btn btn-success"><i class="fas fa-times"></i></a>
-
-                            </td>
-                          </tr><tr role="row" class="even">
-
-                            <td>Title</td>
-
-                            <td>17:20-19.04.2019</td>
-                            <td class="text-center">10</td>
-                            <td class="text-center">2365,50 €</td>
-                            <td><a href="#" class="btn btn-success">At Way</a></td>
-                            <td>
-                              <a href="#" class="btn btn-info"><i class="fas fa-eye"></i></a>
-                              <a href="#" class="btn btn-success"><i class="fas fa-times"></i></a>
-
-                            </td>
-                          </tr></tbody>
+                          </tbody>
 
                         </table></div></div>
                   </div>
@@ -310,52 +233,14 @@
                           </thead>
                           <tbody>
 
-                          <tr role="row" class="odd">
-                            <td>Title</td>
+                          <tr role="row" class="odd"  v-for="discount in offer.offers.discounts">
 
-                            <td>17:20-19.04.2019</td>
-                            <td class="text-center">3</td>
-                            <td class="text-center">2365,50 €</td>
-                            <td><a href="#" class="btn btn-warning">In Progress</a></td>
-                            <td>
-                              <a href="#" class="btn btn-info"><i class="fas fa-eye"></i></a>
-                              <a href="#" class="btn btn-success"><i class="fas fa-times"></i></a>
+                            <td>{{ discount.title }}</td>
 
-                            </td>
-                          </tr><tr role="row" class="even">
-
-                            <td>Title</td>
-
-                            <td>17:20-19.04.2019</td>
-                            <td class="text-center">20</td>
-                            <td class="text-center">2365,50 €</td>
-                            <td><a href="#" class="btn btn-success">At Way</a></td>
-                            <td>
-                              <a href="#" class="btn btn-info"><i class="fas fa-eye"></i></a>
-                              <a href="#" class="btn btn-success"><i class="fas fa-times"></i></a>
-
-                            </td>
-                          </tr><tr role="row" class="odd">
-
-                            <td>Title</td>
-
-                            <td>17:20-19.04.2019</td>
-                            <td class="text-center">15</td>
-                            <td class="text-center">2365,50 €</td>
-                            <td><a href="#" class="btn btn-warning">In Progress</a></td>
-                            <td>
-                              <a href="#" class="btn btn-info"><i class="fas fa-eye"></i></a>
-                              <a href="#" class="btn btn-success"><i class="fas fa-times"></i></a>
-
-                            </td>
-                          </tr><tr role="row" class="even">
-
-                            <td>Title</td>
-
-                            <td>17:20-19.04.2019</td>
-                            <td class="text-center">10</td>
-                            <td class="text-center">2365,50 €</td>
-                            <td><a href="#" class="btn btn-success">At Way</a></td>
+                            <td>{{ discount.date }}</td>
+                            <td class="text-center">{{ discount.sale }}</td>
+                            <td class="text-center">{{ discount.earn }}</td>
+                            <td><a href="#" class="btn btn-warning">{{ discount.status }}</a></td>
                             <td>
                               <a href="#" class="btn btn-info"><i class="fas fa-eye"></i></a>
                               <a href="#" class="btn btn-success"><i class="fas fa-times"></i></a>
@@ -436,59 +321,21 @@
                           </tr>
                           </thead>
                           <tbody>
+                          <tr role="row" class="odd"  v-for="coupon in offer.offers.coupons">
 
-                          <tr role="row" class="odd">
-                            <td>Title</td>
+                            <td>{{ coupon.title }}</td>
 
-                            <td>17:20-19.04.2019</td>
-                            <td class="text-center">3</td>
-                            <td class="text-center">2365,50 €</td>
-                            <td><a href="#" class="btn btn-warning">In Progress</a></td>
+                            <td>{{ coupon.date }}</td>
+                            <td class="text-center">{{ coupon.sale }}</td>
+                            <td class="text-center">{{ coupon.earn }}</td>
+                            <td><a href="#" class="btn btn-warning">{{ coupon.status }}</a></td>
                             <td>
                               <a href="#" class="btn btn-info"><i class="fas fa-eye"></i></a>
                               <a href="#" class="btn btn-success"><i class="fas fa-times"></i></a>
 
                             </td>
-                          </tr><tr role="row" class="even">
-
-                            <td>Title</td>
-
-                            <td>17:20-19.04.2019</td>
-                            <td class="text-center">20</td>
-                            <td class="text-center">2365,50 €</td>
-                            <td><a href="#" class="btn btn-success">At Way</a></td>
-                            <td>
-                              <a href="#" class="btn btn-info"><i class="fas fa-eye"></i></a>
-                              <a href="#" class="btn btn-success"><i class="fas fa-times"></i></a>
-
-                            </td>
-                          </tr><tr role="row" class="odd">
-
-                            <td>Title</td>
-
-                            <td>17:20-19.04.2019</td>
-                            <td class="text-center">15</td>
-                            <td class="text-center">2365,50 €</td>
-                            <td><a href="#" class="btn btn-warning">In Progress</a></td>
-                            <td>
-                              <a href="#" class="btn btn-info"><i class="fas fa-eye"></i></a>
-                              <a href="#" class="btn btn-success"><i class="fas fa-times"></i></a>
-
-                            </td>
-                          </tr><tr role="row" class="even">
-
-                            <td>Title</td>
-
-                            <td>17:20-19.04.2019</td>
-                            <td class="text-center">10</td>
-                            <td class="text-center">2365,50 €</td>
-                            <td><a href="#" class="btn btn-success">At Way</a></td>
-                            <td>
-                              <a href="#" class="btn btn-info"><i class="fas fa-eye"></i></a>
-                              <a href="#" class="btn btn-success"><i class="fas fa-times"></i></a>
-
-                            </td>
-                          </tr></tbody>
+                          </tr>
+                          </tbody>
 
                         </table></div></div>
                   </div>
@@ -563,52 +410,14 @@
                           </thead>
                           <tbody>
 
-                          <tr role="row" class="odd">
-                            <td>Title</td>
+                          <tr role="row" class="odd"  v-for="food_deal in offer.offers.food_deals">
 
-                            <td>17:20-19.04.2019</td>
-                            <td class="text-center">3</td>
-                            <td class="text-center">2365,50 €</td>
-                            <td><a href="#" class="btn btn-warning">In Progress</a></td>
-                            <td>
-                              <a href="#" class="btn btn-info"><i class="fas fa-eye"></i></a>
-                              <a href="#" class="btn btn-success"><i class="fas fa-times"></i></a>
+                            <td>{{ food_deal.title }}</td>
 
-                            </td>
-                          </tr><tr role="row" class="even">
-
-                            <td>Title</td>
-
-                            <td>17:20-19.04.2019</td>
-                            <td class="text-center">20</td>
-                            <td class="text-center">2365,50 €</td>
-                            <td><a href="#" class="btn btn-success">At Way</a></td>
-                            <td>
-                              <a href="#" class="btn btn-info"><i class="fas fa-eye"></i></a>
-                              <a href="#" class="btn btn-success"><i class="fas fa-times"></i></a>
-
-                            </td>
-                          </tr><tr role="row" class="odd">
-
-                            <td>Title</td>
-
-                            <td>17:20-19.04.2019</td>
-                            <td class="text-center">15</td>
-                            <td class="text-center">2365,50 €</td>
-                            <td><a href="#" class="btn btn-warning">In Progress</a></td>
-                            <td>
-                              <a href="#" class="btn btn-info"><i class="fas fa-eye"></i></a>
-                              <a href="#" class="btn btn-success"><i class="fas fa-times"></i></a>
-
-                            </td>
-                          </tr><tr role="row" class="even">
-
-                            <td>Title</td>
-
-                            <td>17:20-19.04.2019</td>
-                            <td class="text-center">10</td>
-                            <td class="text-center">2365,50 €</td>
-                            <td><a href="#" class="btn btn-success">At Way</a></td>
+                            <td>{{ food_deal.date }}</td>
+                            <td class="text-center">{{ food_deal.sale }}</td>
+                            <td class="text-center">{{ food_deal.earn }}</td>
+                            <td><a href="#" class="btn btn-warning">{{ food_deal.status }}</a></td>
                             <td>
                               <a href="#" class="btn btn-info"><i class="fas fa-eye"></i></a>
                               <a href="#" class="btn btn-success"><i class="fas fa-times"></i></a>
@@ -691,53 +500,14 @@
                           </tr>
                           </thead>
                           <tbody>
+                          <tr role="row" class="odd"  v-for="off in offer.offers.offer">
 
-                          <tr role="row" class="odd">
-                            <td>Title</td>
+                            <td>{{ off.title }}</td>
 
-                            <td>17:20-19.04.2019</td>
-                            <td class="text-center">3</td>
-                            <td class="text-center">2365,50 €</td>
-                            <td><a href="#" class="btn btn-warning">In Progress</a></td>
-                            <td>
-                              <a href="#" class="btn btn-info"><i class="fas fa-eye"></i></a>
-                              <a href="#" class="btn btn-success"><i class="fas fa-times"></i></a>
-
-                            </td>
-                          </tr><tr role="row" class="even">
-
-                            <td>Title</td>
-
-                            <td>17:20-19.04.2019</td>
-                            <td class="text-center">20</td>
-                            <td class="text-center">2365,50 €</td>
-                            <td><a href="#" class="btn btn-success">At Way</a></td>
-                            <td>
-                              <a href="#" class="btn btn-info"><i class="fas fa-eye"></i></a>
-                              <a href="#" class="btn btn-success"><i class="fas fa-times"></i></a>
-
-                            </td>
-                          </tr><tr role="row" class="odd">
-
-                            <td>Title</td>
-
-                            <td>17:20-19.04.2019</td>
-                            <td class="text-center">15</td>
-                            <td class="text-center">2365,50 €</td>
-                            <td><a href="#" class="btn btn-warning">In Progress</a></td>
-                            <td>
-                              <a href="#" class="btn btn-info"><i class="fas fa-eye"></i></a>
-                              <a href="#" class="btn btn-success"><i class="fas fa-times"></i></a>
-
-                            </td>
-                          </tr><tr role="row" class="even">
-
-                            <td>Title</td>
-
-                            <td>17:20-19.04.2019</td>
-                            <td class="text-center">10</td>
-                            <td class="text-center">2365,50 €</td>
-                            <td><a href="#" class="btn btn-success">At Way</a></td>
+                            <td>{{ off.date }}</td>
+                            <td class="text-center">{{ off.sale }}</td>
+                            <td class="text-center">{{ off.earn }}</td>
+                            <td><a href="#" class="btn btn-warning">{{ off.status }}</a></td>
                             <td>
                               <a href="#" class="btn btn-info"><i class="fas fa-eye"></i></a>
                               <a href="#" class="btn btn-success"><i class="fas fa-times"></i></a>
@@ -819,53 +589,14 @@
                           </tr>
                           </thead>
                           <tbody>
+                          <tr role="row" class="odd"  v-for="hot_deal in offer.offers.hot_deals">
 
-                          <tr role="row" class="odd">
-                            <td>Title</td>
+                            <td>{{ hot_deal.title }}</td>
 
-                            <td>17:20-19.04.2019</td>
-                            <td class="text-center">3</td>
-                            <td class="text-center">2365,50 €</td>
-                            <td><a href="#" class="btn btn-warning">In Progress</a></td>
-                            <td>
-                              <a href="#" class="btn btn-info"><i class="fas fa-eye"></i></a>
-                              <a href="#" class="btn btn-success"><i class="fas fa-times"></i></a>
-
-                            </td>
-                          </tr><tr role="row" class="even">
-
-                            <td>Title</td>
-
-                            <td>17:20-19.04.2019</td>
-                            <td class="text-center">20</td>
-                            <td class="text-center">2365,50 €</td>
-                            <td><a href="#" class="btn btn-success">At Way</a></td>
-                            <td>
-                              <a href="#" class="btn btn-info"><i class="fas fa-eye"></i></a>
-                              <a href="#" class="btn btn-success"><i class="fas fa-times"></i></a>
-
-                            </td>
-                          </tr><tr role="row" class="odd">
-
-                            <td>Title</td>
-
-                            <td>17:20-19.04.2019</td>
-                            <td class="text-center">15</td>
-                            <td class="text-center">2365,50 €</td>
-                            <td><a href="#" class="btn btn-warning">In Progress</a></td>
-                            <td>
-                              <a href="#" class="btn btn-info"><i class="fas fa-eye"></i></a>
-                              <a href="#" class="btn btn-success"><i class="fas fa-times"></i></a>
-
-                            </td>
-                          </tr><tr role="row" class="even">
-
-                            <td>Title</td>
-
-                            <td>17:20-19.04.2019</td>
-                            <td class="text-center">10</td>
-                            <td class="text-center">2365,50 €</td>
-                            <td><a href="#" class="btn btn-success">At Way</a></td>
+                            <td>{{ hot_deal.date }}</td>
+                            <td class="text-center">{{ hot_deal.sale }}</td>
+                            <td class="text-center">{{ hot_deal.earn }}</td>
+                            <td><a href="#" class="btn btn-warning">{{ hot_deal.status }}</a></td>
                             <td>
                               <a href="#" class="btn btn-info"><i class="fas fa-eye"></i></a>
                               <a href="#" class="btn btn-success"><i class="fas fa-times"></i></a>
@@ -1176,8 +907,22 @@
   /*@import './../../public/css/opening.css';*/
   /*@import './../../public/css/offers.css';*/
 </style>
+
 <script>
-export default {
-  name: 'offer'
-}
+    import {mapState} from 'vuex';
+    export default {
+        name: 'offer',
+        data(){
+            return {
+
+            }
+        },
+        computed: {
+            ...mapState({
+                offer: (state)=>{
+                    return state.offer;
+                }
+            })
+        }
+    }
 </script>

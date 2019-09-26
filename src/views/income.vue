@@ -36,48 +36,25 @@
 
 
 
+                        <tr role="row" class="even" v-for="del_income in income.income.delivary_income">
 
+                          <td class="sorting_1">{{ del_income.id }}</td>
+                          <td>{{ del_income.name }}</td>
 
-                        <tr role="row" class="odd">
-                          <td class="sorting_1">PS-100</td>
-                          <td>Shop1</td>
-                          <td>01.10.2016</td>
-                          <td>100 €</td>
-                          <td>119 €</td>
-                          <td>119 €</td>
-                          <td>119 €</td>
-                          <td>119 €</td>
-                          <td><a href="#" class="btn btn-success">Active</a></td>
+                          <td>{{ del_income.month }}</td>
+                          <td class="text-center">{{ del_income.orders }}</td>
+                          <td class="text-center">{{ del_income.yammi_yammi_fee }}</td>
+                          <td class="text-center">{{ del_income.online_fee }}</td>
+                          <td class="text-center">{{ del_income.canceled }}</td>
+                          <td class="text-center">{{ del_income.total }}</td>
+                          <td><a href="#" class="btn btn-danger">{{ del_income.status }}</a></td>
                           <td>
-                            <a href="#myModal1" data-toggle="modal" data-target="#myModal1" class="btn btn-info"><i class="fa fa-eye"></i></a>
+                            <a href="#" class="btn btn-info" data-target="#add-orders-Popup" data-toggle="modal">View</a>
+
                           </td>
-                        </tr><tr role="row" class="even">
-                          <td class="sorting_1">PS-100</td>
-                          <td>Shop1</td>
-                          <td>01.10.2016</td>
-                          <td>100 €</td>
-                          <td>119 €</td>
-                          <td>119 €</td>
-                          <td>119 €</td>
-                          <td>119 €</td>
-                          <td><a href="#" class="btn btn-success">Active</a></td>
-                          <td>
-                            <a href="#myModal1" data-toggle="modal" data-target="#myModal1" class="btn btn-info"><i class="fa fa-eye"></i></a>
-                          </td>
-                        </tr><tr role="row" class="odd">
-                          <td class="sorting_1">PS-100</td>
-                          <td>Shop1</td>
-                          <td>01.10.2016</td>
-                          <td>100 €</td>
-                          <td>119 €</td>
-                          <td>119 €</td>
-                          <td>119 €</td>
-                          <td>119 €</td>
-                          <td><a href="#" class="btn btn-success">Active</a></td>
-                          <td>
-                            <a href="#myModal1" data-toggle="modal" data-target="#myModal1" class="btn btn-info"><i class="fa fa-eye"></i></a>
-                          </td>
-                        </tr></tbody>
+                        </tr>
+
+                      </tbody>
 
                       </table></div></div><div class="row"><div class="col-sm-5"><div class="dataTables_info" id="example1_info" role="status" aria-live="polite">Showing 1 to 3 of 3 entries</div></div><div class="col-sm-7"><div class="dataTables_paginate paging_simple_numbers" id="example1_paginate"><ul class="pagination"><li class="paginate_button previous disabled" id="example1_previous"><a href="#" aria-controls="example1" data-dt-idx="0" tabindex="0">Previous</a></li><li class="paginate_button active"><a href="#" aria-controls="example1" data-dt-idx="1" tabindex="0">1</a></li><li class="paginate_button next disabled" id="example1_next"><a href="#" aria-controls="example1" data-dt-idx="2" tabindex="0">Next</a></li></ul></div></div></div></div>
                     </div>
@@ -101,54 +78,22 @@
                         </tr>
                         </thead>
                         <tbody>
-                        <tr>
-                          <td>PS-100</td>
-                          <td>Shop1</td>
-                          <td>01.10.2016</td>
 
-                          <td>120</td>
-                          <td>100</td>
+                        <tr role="row" class="even" v-for="rest_income in income.income.resturant_income">
 
-                          <td>119 €</td>
-                          <td>50</td>
+                          <td class="sorting_1">{{ rest_income.id }}</td>
+                          <td>{{ rest_income.name }}</td>
 
-                          <td><a href="#" class="btn btn-success">Active</a></td>
+                          <td>{{ rest_income.month }}</td>
+                          <td class="text-center">{{ rest_income.orders }}</td>
+                          <td class="text-center">{{ rest_income.yammi_yammi_fee }}</td>
+                          <td class="text-center">{{ rest_income.online_fee }}</td>
+                          <td class="text-center">{{ rest_income.canceled }}</td>
+                          <td class="text-center">{{ rest_income.total }}</td>
+                          <td><a href="#" class="btn btn-warning">{{ rest_income.status }}</a></td>
                           <td>
-                            <a href="#service-2myModal1" data-toggle="modal" data-target="#service-2myModal1" class="btn btn-info"><i class="fa fa-eye"></i></a>
-                          </td>
-                        </tr>
+                            <a href="#" class="btn btn-info" data-target="#add-orders-Popup" data-toggle="modal">View</a>
 
-                        <tr>
-                          <td>PS-100</td>
-                          <td>Shop1</td>
-                          <td>01.10.2016</td>
-
-                          <td>120</td>
-                          <td>100</td>
-
-                          <td>119 €</td>
-                          <td>50</td>
-
-                          <td><a href="#" class="btn btn-success">Active</a></td>
-                          <td>
-                            <a href="#service-2myModal1" data-toggle="modal" data-target="#service-2myModal1" class="btn btn-info"><i class="fa fa-eye"></i></a>
-                          </td>
-                        </tr>
-
-                        <tr>
-                          <td>PS-100</td>
-                          <td>Shop1</td>
-                          <td>01.10.2016</td>
-
-                          <td>120</td>
-                          <td>100</td>
-
-                          <td>119 €</td>
-                          <td>50</td>
-
-                          <td><a href="#" class="btn btn-success">Active</a></td>
-                          <td>
-                            <a href="#service-2myModal1" data-toggle="modal" data-target="#service-2myModal1" class="btn btn-info"><i class="fa fa-eye"></i></a>
                           </td>
                         </tr>
 
@@ -178,45 +123,24 @@
                         </tr>
                         </thead>
                         <tbody>
-                        <tr>
-                          <td>PS-100</td>
-                          <td>Shop1</td>
-                          <td>1191</td>
-                          <td>01.10.2016</td>
-                          <td>100 €</td>
-                          <td>119 €</td>
-                          <td>119 €</td>
-                          <td><a href="#" class="btn btn-success">Active</a></td>
+                        <tr role="row" class="even" v-for="par_income in income.income.party_income">
+
+                          <td class="sorting_1">{{ par_income.id }}</td>
+                          <td>{{ par_income.name }}</td>
+
+                          <td>{{ par_income.month }}</td>
+                          <td class="text-center">{{ par_income.orders }}</td>
+                          <td class="text-center">{{ par_income.yammi_yammi_fee }}</td>
+                          <td class="text-center">{{ par_income.online_fee }}</td>
+                          <td class="text-center">{{ par_income.canceled }}</td>
+                          <td class="text-center">{{ par_income.total }}</td>
+                          <td><a href="#" class="btn btn-success">{{ par_income.status }}</a></td>
                           <td>
-                            <a href="#service-3myModal1" data-toggle="modal" data-target="#service-3myModal1" class="btn btn-info"><i class="fa fa-eye"></i></a>
+                            <a href="#" class="btn btn-info" data-target="#add-orders-Popup" data-toggle="modal">View</a>
+
                           </td>
                         </tr>
-                        <tr>
-                          <td>PS-100</td>
-                          <td>Shop1</td>
-                          <td>1191</td>
-                          <td>01.10.2016</td>
-                          <td>100 €</td>
-                          <td>119 €</td>
-                          <td>119 €</td>
-                          <td><a href="#" class="btn btn-success">Active</a></td>
-                          <td>
-                            <a href="#service-3myModal1" data-toggle="modal" data-target="#service-3myModal1" class="btn btn-info"><i class="fa fa-eye"></i></a>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>PS-100</td>
-                          <td>Shop1</td>
-                          <td>1191</td>
-                          <td>01.10.2016</td>
-                          <td>100 €</td>
-                          <td>119 €</td>
-                          <td>119 €</td>
-                          <td><a href="#" class="btn btn-success">Active</a></td>
-                          <td>
-                            <a href="#service-3myModal1" data-toggle="modal" data-target="#service-3myModal1" class="btn btn-info"><i class="fa fa-eye"></i></a>
-                          </td>
-                        </tr>
+
 
 
 
@@ -243,46 +167,21 @@
                         </tr>
                         </thead>
                         <tbody>
-                        <tr>
-                          <td>PS-100</td>
-                          <td>Shop1</td>
-                          <td>01.10.2016</td>
-                          <td>100 €</td>
-                          <td>119 €</td>
-                          <td>119 €</td>
-                          <td>119 €</td>
-                          <td>119 €</td>
-                          <td><a href="#" class="btn btn-success">Active</a></td>
+                        <tr role="row" class="even" v-for="din_income in income.income.dinner_income">
+
+                          <td class="sorting_1">{{ din_income.id }}</td>
+                          <td>{{ din_income.name }}</td>
+
+                          <td>{{ din_income.month }}</td>
+                          <td class="text-center">{{ din_income.orders }}</td>
+                          <td class="text-center">{{ din_income.yammi_yammi_fee }}</td>
+                          <td class="text-center">{{ din_income.online_fee }}</td>
+                          <td class="text-center">{{ din_income.canceled }}</td>
+                          <td class="text-center">{{ din_income.total }}</td>
+                          <td><a href="#" class="btn btn-success">{{ din_income.status }}</a></td>
                           <td>
-                            <a href="#service-4myModal1" data-toggle="modal" data-target="#service-4myModal1" class="btn btn-info"><i class="fa fa-eye"></i></a>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>PS-100</td>
-                          <td>Shop1</td>
-                          <td>01.10.2016</td>
-                          <td>100 €</td>
-                          <td>119 €</td>
-                          <td>119 €</td>
-                          <td>119 €</td>
-                          <td>119 €</td>
-                          <td><a href="#" class="btn btn-success">Active</a></td>
-                          <td>
-                            <a href="#service-4myModal1" data-toggle="modal" data-target="#service-4myModal1" class="btn btn-info"><i class="fa fa-eye"></i></a>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>PS-100</td>
-                          <td>Shop1</td>
-                          <td>01.10.2016</td>
-                          <td>100 €</td>
-                          <td>119 €</td>
-                          <td>119 €</td>
-                          <td>119 €</td>
-                          <td>119 €</td>
-                          <td><a href="#" class="btn btn-success">Active</a></td>
-                          <td>
-                            <a href="#service-4myModal1" data-toggle="modal" data-target="#service-4myModal1" class="btn btn-info"><i class="fa fa-eye"></i></a>
+                            <a href="#" class="btn btn-info" data-target="#add-orders-Popup" data-toggle="modal">View</a>
+
                           </td>
                         </tr>
 
@@ -1430,8 +1329,22 @@
   /*@import './../../public/css/order.css';*/
   /*@import './../../public/css/pos.css';*/
 </style>
+
 <script>
-  export default {
-    name: 'income'
-  }
+    import {mapState} from 'vuex';
+    export default {
+        name: 'income',
+        data(){
+            return {
+
+            }
+        },
+        computed: {
+            ...mapState({
+                income: (state)=>{
+                    return state.income;
+                }
+            })
+        }
+    }
 </script>

@@ -77,80 +77,24 @@
                     </thead>
                     <tbody>
 
-                    <tr role="row" class="odd">
+                    <tr role="row" class="even" v-for="curr_reser in reservations.reservations.current_reservations">
 
-                      <td class="sorting_1">YO-1022510</td>
+                      <td class="sorting_1">{{ curr_reser.id }}</td>
+                      <td>{{ curr_reser.time }}</td>
 
-                      <td>17:20-19.04.2019</td>
-                      <td class="text-center">Birthday</td>
-                      <td class="">Reservation </td>
-                      <td class="text-center">16.02.16 19:00</td>
-                      <td class="text-center"></td>
-                      <td class="text-center">2</td>
-                      <td class="text-center">2</td>
-                      <td><a href="#" class="btn btn-warning">Waiting</a></td>
+                      <td>{{ curr_reser.reservation_for }}</td>
+                      <td class="text-center">{{ curr_reser.reservation_type }}</td>
+                      <td class="text-center">{{ curr_reser.reservation_time }}</td>
+                      <td class="text-center">{{ curr_reser.paid }}</td>
+                      <td class="text-center">{{ curr_reser.adult }}</td>
+                      <td><a href="#"  >{{ curr_reser.kids }}</a></td>
+                      <td><a href="#" class="btn btn-danger">{{ curr_reser.status }}</a></td>
                       <td>
                         <a href="#" class="btn btn-info" data-target="#add-orders-Popup" data-toggle="modal">View</a>
 
                       </td>
                     </tr>
 
-
-                    <tr role="row" class="odd">
-
-                      <td class="sorting_1">YO-1022510</td>
-
-                      <td>17:20-19.04.2019</td>
-                      <td class="text-center">Birthday</td>
-                      <td class="">Reservation <i class="fa fa-plus" aria-hidden="true"></i></td>
-                      <td class="text-center">16.02.16 19:00</td>
-                      <td class="text-center">100 €</td>
-                      <td class="text-center">2</td>
-                      <td class="text-center">2</td>
-                      <td><a href="#" class="btn btn-warning">Waiting</a></td>
-                      <td>
-                        <a href="#" class="btn btn-info" data-target="#add-orders-Popup" data-toggle="modal">View</a>
-                      </td>
-                    </tr>
-
-
-                    <tr role="row" class="odd">
-
-                      <td class="sorting_1">YO-1022510</td>
-
-                      <td>17:20-19.04.2019</td>
-                      <td class="text-center">Birthday</td>
-                      <td class="">Reservation </td>
-                      <td class="text-center">16.02.16 19:00</td>
-                      <td class="text-center"></td>
-                      <td class="text-center">2</td>
-                      <td class="text-center">2</td>
-                      <td><a href="#" class="btn btn-warning">Waiting</a></td>
-                      <td>
-                        <a href="#" class="btn btn-info" data-target="#add-orders-Popup" data-toggle="modal">View</a>
-
-                      </td>
-                    </tr>
-
-
-
-                    <tr role="row" class="odd">
-
-                      <td class="sorting_1">YO-1022510</td>
-
-                      <td>17:20-19.04.2019</td>
-                      <td class="text-center">Birthday</td>
-                      <td class="">Reservation <i class="fa fa-plus" aria-hidden="true"></i></td>
-                      <td class="text-center">16.02.16 19:00</td>
-                      <td class="text-center">100 €</td>
-                      <td class="text-center">2</td>
-                      <td class="text-center">2</td>
-                      <td><a href="#" class="btn btn-warning">Waiting</a></td>
-                      <td>
-                        <a href="#" class="btn btn-info" data-target="#add-orders-Popup" data-toggle="modal">View</a>
-
-                      </td>
-                    </tr>
 
 
                     </tbody>
@@ -210,18 +154,18 @@
               </tr>
               </thead>
               <tbody>
-              <tr role="row" class="odd">
+              <tr role="row" class="even" v-for="cancel_reser in reservations.reservations.cancel_reservations">
 
-                <td class="sorting_1">YO-1022510</td>
+                <td class="sorting_1">{{ cancel_reser.id }}</td>
+                <td>{{ cancel_reser.time }}</td>
 
-                <td>17:20-19.04.2019</td>
-                <td class="text-center">Birthday</td>
-                <td class="">Reservation </td>
-                <td class="text-center">16.02.16 19:00</td>
-                <td class="text-center"></td>
-                <td class="text-center">2</td>
-                <td class="text-center">2</td>
-                <td><a href="#" class="btn btn-success">Accepted</a></td>
+                <td>{{ cancel_reser.reservation_for }}</td>
+                <td class="text-center">{{ cancel_reser.reservation_type }}</td>
+                <td class="text-center">{{ cancel_reser.reservation_time }}</td>
+                <td class="text-center">{{ cancel_reser.paid }}</td>
+                <td class="text-center">{{ cancel_reser.adult }}</td>
+                <td><a href="#" >{{ cancel_reser.kids }}</a></td>
+                <td><a href="#" class="btn btn-danger">{{ cancel_reser.status }}</a></td>
                 <td>
                   <a href="#" class="btn btn-info" data-target="#add-orders-Popup" data-toggle="modal">View</a>
 
@@ -290,18 +234,18 @@
               </tr>
               </thead>
               <tbody>
-              <tr role="row" class="odd">
+              <tr role="row" class="even" v-for="denied_reser in reservations.reservations.denied_reservations">
 
-                <td class="sorting_1">YO-1022510</td>
+                <td class="sorting_1">{{ denied_reser.id }}</td>
+                <td>{{ denied_reser.time }}</td>
 
-                <td>17:20-19.04.2019</td>
-                <td class="text-center">Birthday</td>
-                <td class="">Reservation </td>
-                <td class="text-center">16.02.16 19:00</td>
-                <td class="text-center"></td>
-                <td class="text-center">2</td>
-                <td class="text-center">2</td>
-                <td><a href="#" class="btn btn-danger">Denied</a></td>
+                <td>{{ denied_reser.reservation_for }}</td>
+                <td class="text-center">{{ denied_reser.reservation_type }}</td>
+                <td class="text-center">{{ denied_reser.reservation_time }}</td>
+                <td class="text-center">{{ denied_reser.paid }}</td>
+                <td class="text-center">{{ denied_reser.adult }}</td>
+                <td><a href="#" >{{ denied_reser.kids }}</a></td>
+                <td><a href="#" class="btn btn-success">{{ denied_reser.status }}</a></td>
                 <td>
                   <a href="#" class="btn btn-info" data-target="#add-orders-Popup" data-toggle="modal">View</a>
 
@@ -371,18 +315,18 @@
               </tr>
               </thead>
               <tbody>
-              <tr role="row" class="odd">
+              <tr role="row" class="even" v-for="done_reser in reservations.reservations.done_reservations">
 
-                <td class="sorting_1">YO-1022510</td>
+                <td class="sorting_1">{{ done_reser.id }}</td>
+                <td>{{ done_reser.time }}</td>
 
-                <td>17:20-19.04.2019</td>
-                <td class="text-center">Birthday</td>
-                <td class="">Reservation </td>
-                <td class="text-center">16.02.16 19:00</td>
-                <td class="text-center"></td>
-                <td class="text-center">2</td>
-                <td class="text-center">2</td>
-                <td><a href="#" class="btn btn-success">Done</a></td>
+                <td>{{ done_reser.reservation_for }}</td>
+                <td class="text-center">{{ done_reser.reservation_type }}</td>
+                <td class="text-center">{{ done_reser.reservation_time }}</td>
+                <td class="text-center">{{ done_reser.paid }}</td>
+                <td class="text-center">{{ done_reser.adult }}</td>
+                <td><a href="#" >{{ done_reser.kids }}</a></td>
+                <td><a href="#" class="btn btn-success">{{ done_reser.status }}</a></td>
                 <td>
                   <a href="#" class="btn btn-info" data-target="#add-orders-Popup" data-toggle="modal">View</a>
 
@@ -450,3 +394,22 @@
 <style>
   /*@import './../../public/css/order.css';*/
 </style>
+
+<script>
+    import {mapState} from 'vuex';
+    export default {
+        name: 'reservations',
+        data(){
+            return {
+
+            }
+        },
+        computed: {
+            ...mapState({
+                reservations: (state)=>{
+                    return state.reservations;
+                }
+            })
+        }
+    }
+</script>

@@ -357,8 +357,6 @@
 
 
                         <!-- 4 column start -->
-<h1>dashboard dashboard dashboard</h1><br>
-                        <h1>{{ dashboard }}</h1>
                         <div class="col-md-3">
                           <div class="customerPanel-main">
                             <div class="brd-rad4 text-left br-t">

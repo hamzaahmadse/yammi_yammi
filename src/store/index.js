@@ -5,6 +5,13 @@ import customer from './customer/index';
 import employer from './employer/index';
 import delivary from './delivary/index';
 import setting from './setting/index';
+import online_shop from './online_shop/index';
+import offer from './offer/index';
+import order from './order/index';
+import dinner from './dinners/index';
+import reservations from './reservations/index';
+import income from './income/index';
+import invoice from './invoice/index';
 import state from "./root_state";
 import mutations from "./root_mutations";
 
@@ -17,6 +24,13 @@ export default new Vuex.Store({
     customer,
     employer,
     delivary,
-    setting
+    setting,
+    online_shop,
+    offer,
+    order,
+    dinner,
+    reservations,
+    income,
+    invoice
   }
 });

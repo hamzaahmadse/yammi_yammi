@@ -207,15 +207,15 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr role="row" class="odd">
+                <tr role="row" class="odd" v-for="online in online_shop.online_shop.order">
 
-                  <td class="sorting_1">YO-1022510</td>
-                  <td>My Shop</td>
+                  <td class="sorting_1">{{ online.order_id}}</td>
+                  <td>{{ online.item}}</td>
 
-                  <td>2365,50 €</td>
-                  <td class="text-center">17:20-19.04.2019</td>
-                  <td class="text-center">2365,50 €</td>
-                  <td class="text-center">3465ffds</td>
+                  <td>{{ online.order_id}}</td>
+                  <td class="text-center">{{ online.amount}}</td>
+                  <td class="text-center">{{ online.date}}</td>
+                  <td class="text-center">{{ online.tracking_id}}</td>
                   <td>
                     <a href="#" class="btn btn-info"><i class="fas fa-eye"></i></a>
                     <a href="#" class="btn btn-success"><i class="fas fa-times"></i></a>
@@ -246,8 +246,22 @@
 <style>
   /*@import './../../public/css/order.css';*/
 </style>
+
 <script>
-export default {
-  name: 'online-shop'
-}
+    import {mapState} from 'vuex';
+    export default {
+        name: 'online-shop',
+        data(){
+            return {
+
+            }
+        },
+        computed: {
+            ...mapState({
+                online_shop: (state)=>{
+                    return state.online_shop;
+                }
+            })
+        }
+    }
 </script>
