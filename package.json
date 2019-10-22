@@ -8,7 +8,7 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "bootstrap": "^3.3.7",
+    "bootstrap": "^3.4.1",
     "chartist": "^0.11.4",
     "core-js": "^2.6.5",
     "dropd": "^0.4.0",
